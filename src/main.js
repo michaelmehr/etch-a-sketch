@@ -1,7 +1,9 @@
 const container = document.querySelector('.container');
 let gridItems = document.querySelectorAll('.grid-item');
 let gridItemsArray = [...gridItems];
+
 const button = document.querySelector('button');
+button.addEventListener('click', handleClick);
 
 function generateGrid(gridSize = 16) {
     for (let row = 1; row <= gridSize; row++) {
@@ -23,4 +25,6 @@ function handleHover(e) {
     e.target.classList.toggle('black');
 }
 
-generateGrid();
+function handleClick(e) {
+    generateGrid(prompt());
+}
