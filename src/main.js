@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 let gridItems = document.querySelectorAll('.grid-item');
 let gridItemsArray = [...gridItems];
+const button = document.querySelector('button');
 
 function generateGrid(gridSize = 16) {
     for (let row = 1; row <= gridSize; row++) {
