@@ -28,3 +28,9 @@ function handleHover(e) {
 function handleClick(e) {
     generateGrid(prompt());
 }
+
+function clearGrid(grid) {
+    while (grid.firstChild) {
+        grid.removeChild(grid.firstChild);
+    }
+}
