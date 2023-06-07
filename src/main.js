@@ -21,3 +21,5 @@ function generateGrid(gridSize = 16) {
 function handleHover(e) {
     e.target.classList.toggle('black');
 }
+
+generateGrid();
