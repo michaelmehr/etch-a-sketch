@@ -25,7 +25,8 @@ function handleHover(e) {
     e.target.classList.toggle('black');
 }
 
-function handleClick(e) {
+function handleClick() {
+    clearGrid(container);
     generateGrid(prompt());
 }
 
