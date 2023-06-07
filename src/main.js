@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 let gridItems = document.querySelectorAll('.grid-item');
+let gridItemsArray = [...gridItems];
 
 function generateGrid(gridSize = 16) {
     for (let row = 1; row <= gridSize; row++) {
@@ -13,4 +14,10 @@ function generateGrid(gridSize = 16) {
         }
     }
     gridItems = document.querySelectorAll('.grid-item');
+    gridItemsArray = [...gridItems];
+    gridItemsArray.forEach(e => e.addEventListener('mouseover', handleHover))
+}
+
+function handleHover(e) {
+    e.target.classList.toggle('black');
 }
